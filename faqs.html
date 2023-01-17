@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Faqs</title
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+    body {
+        background-image: url("images/croissants-bread.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+        image-rendering: pixelated;
+        margin: 0;
+        }
+
+        .hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.062)), url("images/header6.png");
+  width: 1349px;
+  height: 330px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+h2{
+    font-size: 22px;
+    color: #eb8a49;
+    text-align: center;
+    background-image: url(images/nav\ logo.png);
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: -1px 1px 0 rgb(255, 255, 255),
+                          1px 1px 0 rgb(255, 255, 255),
+                         1px -1px 0 rgb(255, 255, 255),
+                        -1px -1px 0 rgb(255, 255, 255);
+}
+        table {
+            border-collapse: collapse;
+            width: 1000px;
+            height: 300px;
+            border: 3px solid #f1f1f1;
+            background-color: rgba(107, 64, 15, 0.74); 
+            color: white;
+            font-weight: bold;
+       
+            }
+
+        table.center {
+            text-align: center;
+            padding: 16px;
+            margin-left: auto; 
+            margin-right: auto;
+            }
+p{
+  color: #262626;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.sidepanel  {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        color: #224562;
+        background-image: url(images/choc\ cake.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border:none;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        }
+
+.sidepanel a, .dropdown-btn{
+        padding: 8px 8px 8px 21px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        text-align: left;
+        border: none;
+        
+        }
+
+.sidepanel a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 255, 255, 0);
+  margin: 25px;
+  width :auto;
+  
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+ 
+
+#myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: rgb(255, 206, 161);
+      
+      }
+
+      #myBtn:hover {
+        background-color: rgb(255, 120, 120);
+      }
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+  
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 30px;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 60%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 18px;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.76);
+  overflow: hidden;
+  width: 56.4%;
+  margin: auto;
+}
+
+</style>
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top" style="font-size:20px;cursor:pointer"><img src="images/arrow.png" style="width:30px" height="30px" align="center"></button>
+  <div id="mySidepanel" class="sidepanel">
+
+    <h2>PASSION BAKERY</h2><br>
+
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="index.html" 
+      style="cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.76)">HOME</a>  
+      <br>
+      <a href="group.html" 
+      style="cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.76)">OUR GROUP</a>  
+      <br>
+  <a href="aboutus.html" style="
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.76)"
+      >ABOUT US</a>  
+      <br> 
+      <button class="dropdown-btn" style="
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.76); width:270px">PRODUCTS
+          <i class="fa fa-caret-down">>></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="cake.html">CAKES</a>
+          <a href="pastry.html">PASTRY</a>
+          <a href="desserts.html">DESSERTS</a>
+        </div>
+      <br>
+  <a href="special.html" style="
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.76)">SPECIAL</a> 
+      <br>
+  <a href="recipe.html" style="
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.76)">RECIPE</a> 
+      <br>
+  <a href="faqs.html" style="
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.76)">FAQS</a>
+          <br>
+  <a href="Feedback.html" style="
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.76)">FEEDBACK</a> 
+
+    </div>
+    <div class="hero-image">
+    <button class="openbtn" onclick="openNav()"><img src="images/logo.png" style="width: 200px" height="200px"></button></div>
+
+      <div class="table" id="main">
+        <table class="center">
+          <tr><td><h1>Question and Answer</h1>
+  <button class="accordion">Do you sell to wholesale clients?</button>
+  <div class="panel">
+    <p>Yes, we sell to many fine hotels, restaurants, coffee companies, and stores at either wholesale or discounted pricing. If you hold a Resale License for food and would like more information or pricing, Please submit an online inquiry.</p>
+  </div>
+  <br><br>
+  <button class="accordion">When are payments and final desicions due?</button>
+  <div class="panel">
+    <p>To secure your date onto our calendar: 50% down payment is due. 4 to 6 weeks prior to a major event: FINAL BALANCE MUST BE PAID and confirmation of all details and guest counts must be on approved invoice. If order is placed within  the same month as the event, please plan for full payment to confirm your order.</p>
+  </div>
+  <br><br>
+  <button class="accordion">What type of payments do you accept?</button>
+  <div class="panel">
+    <p>We currently accept CASH, checks, VISA, MasterCard, & Discover All orders require payment in advance.</p>
+  </div>
+  <br><br>
+  <button class="accordion">How do you determine the price of custom cake?</button>
+  <div class="panel">
+    <p>Cakes are typically priced by number of SERVINGS they feed + the LABOR for the design. The more detail or time required in labor cost, the more it will cost. We have no idea what we want to start?
+      Well, here are questions we will need to know so that we can guide you: WHAT flavors do you typically like (Are you into chocolate? Fruit? Spices? Nuts?) How important are sweets to your event? Is anyone ALLERGIC to an ingredient? Do you want BASIC, or do you want WOW FACTOR?  </p>
+  </div>
+  <br><br>
+  <button class="accordion">What if I need to cancel my order? </button>
+  <div class="panel">
+    <p>If paid in full, a 75% refund or a 100% store credit will be issued for any cancellations that are made 72 hours before the date of a custom order. If there was only a deposit placed on the order, a store credit will be given of the deposit amount. We  do not refund any portion of the purchase price for orders canceled  less than 72 hours before the due date and time.</p>
+  </div>
+  <br><br>
+  <button class="accordion">Do you make Wedding Favors?</button>
+  <div class="panel">
+    <p>Yes. You may order our delicious, personalized cookies for your guests – please inquire. Crystal sugar, painted, fancy decorated, and even photos of YOU can be a super fun gift that guests will take home and eat (or share with their kids who were not invited to the wedding).</p>
+  </div>
+  <br><br>
+  </td></tr></table>
+  
+
+<script>
+
+function openNav() {
+              document.getElementById("mySidepanel").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidepanel").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+        
+            let mybutton = document.getElementById("myBtn");
+               
+                    window.onscroll = function() {scrollFunction()};
+                    
+                    function scrollFunction() {
+                      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                      } else {
+                        mybutton.style.display = "none";
+                      }
+                    }
+        
+                    function topFunction() {
+                      document.body.scrollTop = 0;
+                      document.documentElement.scrollTop = 0;
+                    }
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+</script>
+
+<div class="footer">
+      
+  <p align="center" style="color:#242424e8" ><small>&copy; 2023 Passion Bakery. <br> 
+    This website are for the purpose of assignment on HTML only. 
+    
+    Recommended browser Google Chrome. Resolution 1366 X 768.<br>
+    Last update January 17, 2023</small></p>
+  
+  </div>
+
+</body>
+</html>

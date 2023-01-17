@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+<head>
+
+<style>
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+    
+}
+html,body {
+	margin:0;
+	padding:0;
+    font-family: 'Times New Roman', Times, serif;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+input{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+h1{ padding-top: 2%;
+    padding-left: 10%;
+    font-size: 50px;
+    color: #f1f1f1;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: -1px 1px 0 rgb(0, 0, 0),
+                          1px 1px 0 rgb(0, 0, 0),
+                         1px -1px 0 rgb(0, 0, 0),
+                        -1px -1px 0 rgb(0, 0, 0);
+
+}
+p{ padding-top: 3%;
+    padding-left: 10%;
+    font-size: 30px;
+    color: #f1f1f1;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: -1px 1px 0 rgb(0, 0, 0),
+                          1px 1px 0 rgb(0, 0, 0),
+                         1px -1px 0 rgb(0, 0, 0),
+                        -1px -1px 0 rgb(0, 0, 0);
+    
+}
+h2{
+    font-size: 25px;
+    color: #eb8a49;
+    text-align: center;
+    background-image: url(images/nav\ logo.png);
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: -1px 1px 0 rgb(255, 255, 255),
+                          1px 1px 0 rgb(255, 255, 255),
+                         1px -1px 0 rgb(255, 255, 255),
+                        -1px -1px 0 rgb(255, 255, 255);
+}
+ol,ul {
+	list-style:none;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+
+body{
+  font-family: "helvetica neue", helvetica;
+	background: #000;
+	font-weight: 400;
+	font-size: 15px;
+	color: #aa3e03;
+	overflow-y: scroll;
+	overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+.ie7 body{
+	overflow:hidden;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+.container{
+	position: relative;
+	text-align: left;
+	padding-top:1%;
+}
+.clr{
+	clear: both;
+}
+.container > header{
+	padding: 30px 30px 10px 20px;
+	margin: 0px 20px 10px 20px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.986);
+    text-align: left;
+    
+}
+
+.slideshow,
+.slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.slideshow:after {
+    content: '';
+    background: transparent url(../images/pattern.png) repeat top left;
+}
+.slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden ;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.slideshow li div h3 {
+  font-family: "helvetica neue", helvetica;
+  text-transform: uppercase;
+  font-size: 80px;
+  padding: 0;
+  line-height: 200px;
+	color: rgba(255,255,255, 0.8);
+}
+.slideshow li:nth-child(1) span { background-image: url('slideshow/bread.png') }
+.slideshow li:nth-child(2) span {
+    background-image: url('slideshow/croissant.png');
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.slideshow li:nth-child(3) span {
+    background-image: url('slideshow/caramel.jpg');
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.slideshow li:nth-child(4) span {
+    background-image: url('slideshow/biscoff.png');
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.slideshow li:nth-child(5) span {
+    background-image: url('slideshow/pancake.jpg');
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.slideshow li:nth-child(6) span {
+    background-image: url('slideshow/shortcake.jpg');
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.slideshow li:nth-child(5) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.slideshow li:nth-child(6) div {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+
+@-webkit-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.05);
+	    -webkit-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -webkit-transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -moz-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -moz-transform: scale(1.05);
+	    -moz-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -moz-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -moz-transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -o-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -o-transform: scale(1.05);
+	    -o-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -o-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -o-transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -ms-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -ms-transform: scale(1.05);
+	    -ms-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -ms-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -ms-transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    transform: scale(1.1);
+	}
+	100% { opacity: 0 }
+}
+
+.no-cssanimations .slideshow li span{
+	opacity: 1;
+}
+@media screen and (max-width: 1140px) { 
+	.slideshow li div h3 { font-size: 100px }
+}
+@media screen and (max-width: 600px) { 
+	.slideshow li div h3 { font-size: 50px }
+}
+
+.sidepanel  {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        color: #224562;
+        background-image: url(images/choc\ cake.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border:none;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        }
+
+.sidepanel a, .dropdown-btn{
+        padding: 8px 8px 8px 21px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        text-align: left;
+        border: none;
+    
+        }
+
+.sidepanel a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 255, 255, 0);
+  margin: 25px;
+  width :auto;
+  
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+  
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 30px;
+}
+
+</style>
+</head>
+
+<body>
+    <div id="mySidepanel" class="sidepanel">
+
+
+        <h2>PASSION BAKERY</h2><br>
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html" 
+        style="cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.76)">HOME</a>  
+        <br>
+        <a href="group.html" 
+        style="cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.76)">OUR GROUP</a>  
+        <br>
+    <a href="aboutus.html" style="
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.76)"
+        >ABOUT US</a>  
+        <br> 
+        <button class="dropdown-btn" style="
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.76); width:270px">PRODUCTS
+            <i class="fa fa-caret-down">>></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="cake.html">CAKES</a>
+            <a href="pastry.html">PASTRY</a>
+            <a href="desserts.html">DESSERTS</a>
+          </div>
+        <br>
+    <a href="special.html" style="
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.76)">SPECIAL</a> 
+        <br>
+    <a href="recipe.html" style="
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.76)">RECIPE</a> 
+        <br>
+    <a href="faqs.html" style="
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.76)">FAQS</a>
+            <br>
+    <a href="feedback.html" style="
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.76)">FEEDBACK</a> 
+    </div>
+    
+  <ul class="slideshow">
+    <li><span>Image 01</span></li>
+    <li><span>Image 02</span></li>
+    <li><span>Image 03</span></li>
+    <li><span>Image 04</span></li>
+    <li><span>Image 05</span></li>
+	<li><span>Image 06</span></li>
+  </ul>
+    <div class="container">
+		<button class="openbtn" onclick="openNav()"><img src="images/logo.png" style="width: 260px" height="260px"></button>
+         <h1>PASSION BAKERY</h1>
+         <p>Passion Bakery is a company that serve various type<br>of bakery products such as cakes, pastries and desserts.</p>
+  </div>
+
+<script>
+        function openNav() {
+              document.getElementById("mySidepanel").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+        function closeNav() {
+              document.getElementById("mySidepanel").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+</div>
+
+</body>
+</html>
